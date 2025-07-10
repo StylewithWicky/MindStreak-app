@@ -1,0 +1,132 @@
+/*@import "@fontsource/jacques-francois";*/
+
+.landing-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Jacques Francois", serif;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  top: 40%;
+  transform: translateY(-40%);
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.75rem);
+  margin-bottom: 2rem;
+}
+
+.buttons .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0 1rem;
+  border: 1px solid white;
+  color: silver;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .buttons .btn {
+    display: block;
+    margin: 0.5rem auto;
+  }
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: white;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+/* Cinematic Fade-In Effects */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 1.4s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bounce Scroll Indicator */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Next Section */
+.next-section {
+  height: 100vh;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: sans-serif;
+}
